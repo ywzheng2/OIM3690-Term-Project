@@ -1,0 +1,121 @@
+/* hero section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+  gap: 5rem;
+}
+.hero-left div {
+  max-width: 350px;
+}
+.hero-left div h1 {
+  font-weight: 600;
+  line-height: 1.4em;
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #3b413a;
+}
+.hero-left div p {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  color: #3f3c3c;
+}
+.hero-right img {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    gap: 0;
+  }
+  .hero-left {
+    flex: 3;
+  }
+  .hero-right {
+    flex: 4;
+  }
+  .hero-left div h1 {
+    font-size: 3.6rem;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+
+  .hero-left div p {
+    margin-bottom: 2rem;
+    text-align: left;
+    font-size: 1.8rem;
+  }
+
+  .hero-right img {
+    max-width: none;
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .hero-left,
+  .hero-right {
+    flex: 1;
+  }
+}
+
+/* YouTube section */
+.youtuber {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #3b413a;
+}
+.youtuber-main {
+  display: flex;
+  justify-content: space-between;
+}
+.youtuber-info {
+  display: flex;
+  flex-direction: column;
+  background-color: #d6e5d8;
+  padding: 1.5rem;
+  border-radius: 30px;
+  width: 200px;
+  transition: transform 0.5s;
+}
+
+.youtuber-info:hover {
+  transform: translateX(10px);
+}
+
+.youtuber-info img {
+  object-fit: cover;
+  border-radius: 50%;
+}
+.yt-info h3 {
+  font-size: 1.4rem;
+  line-height: 1.3em;
+  font-weight: 500;
+  color: #3b413a;
+  margin-bottom: 0.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .youtuber {
+    font-size: 2.4rem;
+  }
+  .youtuber-main {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+  }
+  .yt-info {
+    padding: 1.5rem;
+    border-radius: 12px;
+    gap: 1rem;
+    text-align: center;
+  }
+  .yt-info h3 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+  }
+}
