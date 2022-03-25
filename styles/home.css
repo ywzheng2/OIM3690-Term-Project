@@ -3,68 +3,42 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column-reverse;
+  flex-direction: row;
   gap: 5rem;
 }
+
+.hero-left {
+  flex: 2;
+}
+.hero-right {
+  flex: 3;
+}
+
 .hero-left div {
   max-width: 350px;
 }
 .hero-left div h1 {
-  font-weight: 600;
-  line-height: 1.4em;
-  text-align: center;
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
+  font-size: 36px;
+  font-weight: bold;
   color: #3b413a;
+  text-align: left;
 }
 .hero-left div p {
-  text-align: center;
-  font-size: 1.4rem;
-  margin-bottom: 1.5rem;
+  text-align: left;
+  font-size: 18px;
   color: #3f3c3c;
 }
 .hero-right img {
-  max-width: 1000px;
   width: 100%;
   margin: 0 auto;
 }
 
-@media only screen and (min-width: 768px) {
-  .hero {
-    flex-direction: row;
-    gap: 0;
-  }
-  .hero-left {
-    flex: 3;
-  }
-  .hero-right {
-    flex: 4;
-  }
-  .hero-left div h1 {
-    font-size: 3.6rem;
-    margin-bottom: 2rem;
-    text-align: left;
-  }
-
-  .hero-left div p {
-    margin-bottom: 2rem;
-    text-align: left;
-    font-size: 1.8rem;
-  }
-
-  .hero-right img {
-    max-width: none;
-    width: 90%;
-  }
-}
-@media only screen and (max-width: 900px) {
-  .hero-left,
-  .hero-right {
-    flex: 1;
-  }
-}
 
 /* YouTube section */
+.new-section {
+  padding: 4px 0;
+}
+
 .youtuber {
   font-size: 1.8rem;
   font-weight: 600;
