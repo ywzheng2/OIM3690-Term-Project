@@ -33,6 +33,25 @@
   margin: 0 auto;
 }
 
+/* about section */
+.text1 {
+  width: auto;
+  height: auto;
+  background-color: #55828b;
+  /* margin: 10px; */
+  border-radius: 8px;
+  padding: 30px 30px;
+  color: rgb(228, 224, 220);
+  line-height: 30px;
+  text-align: center;
+  margin-top: -40px;
+  transition: transform 0.5s;
+}
+
+.text1:hover {
+  transform: translateY(-20px);
+  box-shadow: 10px 15px rgb(171, 196, 171);
+}
 
 /* YouTube section */
 .new-section {
