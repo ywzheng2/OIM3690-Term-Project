@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Site Map | Stay Healthy At Home</title>
+    <title>Lower Body | Stay Healthy At Home</title>
     <meta
       name="description"
       content="Want to improve your lifestyle, quality of sleep, and performance and reduce distress. At-home workout routines are the most effective, flexible, and feasible solution. Learn more about at-home workouts and discover a workout plan that suits your busy schedule on SHAT."
@@ -13,27 +13,54 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="styles/main.css" />
     <style>
-      section {
-        padding: 3px 0;
+      /* first section */
+      .importance {
+        padding: 4px 0;
       }
-      li {
-        font-size: 20px;
-        font-weight: bold;
-        list-style: none;
+
+      .importance .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
-      .site-info a {
-        color: #3f3c3c;
-        padding-top: 20px;
+
+      .importance .container .left {
+        width: 40%;
+        height: 500px;
+        border-radius: 8px;
+        background: center / cover no-repeat url(images/upper-body2.jpg);
       }
-      .coming,
-      .coming-soon a {
-        padding-top: 20px;
-        color: #e5e6e7;
-        font-size: 16px;
+
+      .importance .container .right {
+        width: 50%;
+        background-color: #2f3d3c;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+        border-radius: 8px;
+        color: white;
+        margin-left: -150px;
+      }
+
+      .importance .container .right h1 {
+        font-size: 40px;
+        font-weight: lighter;
+        color: rgb(228, 224, 220);
+      }
+
+      .importance .container .right p {
+        margin: 20px 0;
+        line-height: 25px;
+        color: rgb(228, 224, 220);
+      }
+
+      /* second section */
+      .video-gallery .container h1 {
+        text-align: center;
       }
     </style>
   </head>
-
   <body>
     <!-- nav section -->
     <div class="nav">
@@ -63,33 +90,32 @@
     </div>
     <!-- end nav section -->
 
-    <!-- site map -->
-    <section>
+    <!-- importance first section -->
+    <section class="importance">
       <div class="container">
-        <h1>Stay Healthy At Home Site Map</h1>
-        <ul class="site-info">
-          <li><a href="index.html">Home Page</a></li>
-          <li><a href="importance.html">Workout Info</a></li>
-          <li><a href="workout.html">Workout</a></li>
-          <li><a href="upper-body.html">Upper Body Workout</a></li>
-          <li><a href="lower-body.html">Lower Body Workout</a></li>
-          <li><a href="plan.html">Workout Plan</a></li>
-          <li><a href="contact.html">Contact & Feedback Page</a></li>
-        </ul>
-        <div class="coming">
-          <h3>Coming Soon</h3>
-          <ul class="coming-soon">
-            <li><a href="full-body.html">Fully Body Workout</a></li>
-            <li><a href="stretching.html">Stretching Workouts</a></li>
-            <!-- <li><a href="">Weekly Workout Plan - Tuesday</a></li>
-            <li><a href="">Weekly Workout Plan - Wednesday</a></li>
-            <li><a href="">Weekly Workout Plan - Thursday</a></li>
-            <li><a href="">Weekly Workout Plan - Friday</a></li> -->
-          </ul>
+        <div class="left"></div>
+        <div class="right">
+          <div class="content">
+            <h1>Stretching At-Home Workouts</h1>
+            <p>
+              The workouts are broken apart by the difficulty level (beginning,
+              intermediate, and advanced). Find the level best suits you!
+            </p>
+            <p>These lower body workouts help build muscle in the legs.</p>
+            <!-- <p>Super Busy? - check out our 5 minutes workouts!</p> -->
+          </div>
         </div>
       </div>
     </section>
-    <!-- end site map -->
+    <!-- end importance first section -->
+
+    <!-- importance 2nd section -->
+    <!-- TODO: need a javascript to enlarge to video when the user click play -->
+    <section class="video-gallery">
+      <div class="container">
+        <h1>Stretching Workouts - Coming Soon</h1>
+      </div>
+    </section>
 
     <!-- footer section -->
     <footer>
