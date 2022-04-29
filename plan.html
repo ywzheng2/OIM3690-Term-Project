@@ -14,8 +14,13 @@
     <link rel="stylesheet" href="styles/main.css" />
 
     <style>
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
       section {
-        padding: 3px 0;
+        padding-top: 3px;
       }
       .workout-plan .buttons button {
         background: transparent;
@@ -68,6 +73,16 @@
         text-align: center;
         /* padding: 0; */
       }
+
+      /* @media screen and (max-width: 800px) {
+        table {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      } */
     </style>
   </head>
   <body>
@@ -76,22 +91,35 @@
       <div class="container">
         <div class="nav-main">
           <div class="logo">
-            <img
+            <a href="index.html"><img
               src="images/logo.JPG"
               alt="SHAH Logo"
               title="stay healthy at home logo"
-            />
+              id="logo"
+            /></a>
           </div>
           <nav>
-            <div class="nav-list-main">
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="importance.html">Live Well</a></li>
-                <li><a href="workout.html">Workout</a></li>
-                <li><a href="plan.html">Workout Plan</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="sitemap.html">Sitemap</a></li>
-              </ul>
+            <div class="nav-icon">
+              <img src="images/menu.svg" alt="menu-icon" title="menu">
+              
+            </div>
+
+            <div class="nav-outside"></div>
+            <div class="nav-list">
+              <div class="nav-close">
+                <img src="images/x-square.svg" alt="close-icon" title="close">
+              </div>
+
+              <div class="nav-list-main">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="importance.html">Live Well</a></li>
+                  <li><a href="workout.html">Workout</a></li>
+                  <li><a href="plan.html">Workout Plan</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="sitemap.html">Sitemap</a></li>
+                </ul>
+              </div>
             </div>
           </nav>
         </div>
@@ -108,203 +136,255 @@
         </div>
 
         <div class="buttons">
-          <button type="button"><a href="#">Monday</a></button>
-          <button type="button"><a href="">Tuesday</a></button>
-          <button type="button"><a href="">Wednesday</a></button>
-          <button type="button"><a href="">Thursday</a></button>
-          <button type="button"><a href="">Friday</a></button>
+          <button id="monday">Monday</button>
+          <button id="tuesday">Tuesday</button>
+          <button id="wednesday">Wednesday</button>
+          <button id="thursday">Thursday</button>
+          <button id="friday">Friday</button>
         </div>
 
         <div>
           <table>
-            <caption>
-              Monday
-            </caption>
+            <h2 class="day"></h2>
+            <caption></caption>
             <tr>
               <td class="plans">
-                <div>
-                  <h3>Beginner</h3>
-                  <iframe
-                    src="https://www.youtube.com/embed/cLO4uRh4xDE"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-                <div class="video-title">
-                  <h4>10 Min Toned Arms</h4>
-                  <p>Pamela Reif</p>
-                </div>
-              </td>
-
-              <td class="plans">
-                <div>
-                  <h3>Intermediate</h3>
-                  <iframe
-                    src="https://www.youtube.com/embed/e_HviaEIEas"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-                <div class="video-title">
-                  <h4>10 Min Abs with Weights</h4>
-                  <p>Pamela Reif</p>
+                <div class="b1">
+                  <div>
+                    <h3>Beginner</h3>
+                    <iframe
+                      src="https://www.youtube.com/embed/cLO4uRh4xDE"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                  <div class="video-title">
+                    <h4>10 Min Toned Arms</h4>
+                    <p>Pamela Reif</p>
+                  </div>
                 </div>
               </td>
 
               <td class="plans">
-                <div>
-                  <h3>Advance</h3>
-                  <iframe
-                    src="https://www.youtube.com/embed/Y2eOW7XYWxc"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
+                <div class="i1">
+                  <div>
+                    <h3>Intermediate</h3>
+                    <iframe
+                      src="https://www.youtube.com/embed/e_HviaEIEas"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                  <div class="video-title">
+                    <h4>10 Min Abs with Weights</h4>
+                    <p>Pamela Reif</p>
+                  </div>
                 </div>
-                <div class="video-title">
-                  <h4>10 Min Upper Body Workout</h4>
-                  <p>Pamela Reif</p>
+              </td>
+
+              <td class="plans">
+                <div class="a1">
+                  <div>
+                    <h3>Advance</h3>
+                    <iframe
+                      src="https://www.youtube.com/embed/Y2eOW7XYWxc"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                  <div class="video-title">
+                    <h4>10 Min Upper Body Workout</h4>
+                    <p>Pamela Reif</p>
+                  </div>
                 </div>
               </td>
             </tr>
 
             <tr>
               <td class="plans">
-                <div>
-                  <iframe
-                    src="https://www.youtube.com/embed/R1EKAgFRe2E"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-                <div class="video-title">
-                  <h4>10 Min Legs + Fat Burn</h4>
-                  <p>Pamela Reif</p>
-                </div>
-              </td>
-
-              <td class="plans">
-                <div>
-                  <iframe
-                    src="https://www.youtube.com/embed/h9uZVP_qLVo"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-                <div class="video-title">
-                  <h4>10 Min Inner Thigh</h4>
-                  <p>Pamela Reif</p>
+                <div class="b2">
+                  <div>
+                    <iframe
+                      src="https://www.youtube.com/embed/R1EKAgFRe2E"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                  <div class="video-title">
+                    <h4>10 Min Legs + Fat Burn</h4>
+                    <p>Pamela Reif</p>
+                  </div>
                 </div>
               </td>
 
               <td class="plans">
-                <div>
-                  <iframe
-                    src="https://www.youtube.com/embed/vOiP3kfFlrE"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
+                <div class="i2">
+                  <div>
+                    <iframe
+                      src="https://www.youtube.com/embed/h9uZVP_qLVo"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                  <div class="video-title">
+                    <h4>10 Min Inner Thigh</h4>
+                    <p>Pamela Reif</p>
+                  </div>
                 </div>
-                <div class="video-title">
-                  <h4>10 Min Killer Sixpack</h4>
-                  <p>Pamela Reif</p>
+              </td>
+
+              <td class="plans">
+                <div class="a2">
+                  <div>
+                    <iframe
+                      src="https://www.youtube.com/embed/vOiP3kfFlrE"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                  <div class="video-title">
+                    <h4>10 Min Killer Sixpack</h4>
+                    <p>Pamela Reif</p>
+                  </div>
                 </div>
               </td>
             </tr>
 
-            <tr>
-              <td class="plans">
-                <div>
-                  <iframe
-                    src="https://www.youtube.com/embed/06cwQlikBEA"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-                <div class="video-title">
-                  <h4>12 Min Happy Sweat Workout</h4>
-                  <p>Pamela Reif</p>
-                </div>
-              </td>
-
-              <td class="our-project">
-                <div>
-                  <iframe
-                    src="https://www.youtube.com/embed/7537-yAhASA"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-                <div class="video-title">
-                  <h4>10 Min Medium HIIT</h4>
-                  <p>Pamela Reif</p>
-                </div>
-              </td>
-
-              <td class="plans">
-                <div>
-                  <iframe
-                    src="https://www.youtube.com/embed/Y2eOW7XYWxc"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-                <div class="video-title">
-                  <h4>20 Min Full Body Workout</h4>
-                  <p>Pamela Reif</p>
-                </div>
-              </td>
-            </tr>
           </table>
         </div>
       </div>
     </section>
     <!-- end workout plan section -->
 
-    <!-- footer section -->
-    <footer>
-      <div class="container">
-        <div class="footer-main">
-          <div class="footer-col1">
-            <div class="footer-logo">
-              <img
-                src="images/logo.JPG"
-                alt="SHAT logo"
-                title="stay healthy at home logo"
-              />
-            </div>
-          </div>
-          <div>
-            <h3>Links</h3>
-            <ol class="footer-text">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="importance.html">Live Well</a></li>
-              <li><a href="workout.html">Workout</a></li>
-              <li><a href="plan.html">Workout Plan</a></li>
-              <li><a href="contact.html">Contact & Feedback</a></li>
-              <li><a href="sitemap.html">Sitemap</a></li>
-            </ol>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- end footer section -->
+    <script>
+      const messageEl = document.querySelector("caption");
+
+      const day = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+
+      const beginnerSrc = [
+      "https://www.youtube.com/embed/H2U3HwAyBXg","https://www.youtube.com/embed/IT94xC35u6k","https://www.youtube.com/embed/VWj8ZxCxrYk","https://www.youtube.com/embed/CD6BCdFHogg","https://www.youtube.com/embed/fMPoCc78v0g",
+      ];
+      const beg = beginnerSrc.length;
+      // const begRandIndex = Math.floor(Math.random() * beg);
+
+      const intermediateSrc = [
+      "https://www.youtube.com/embed/DHOPWvO3ZcI","https://www.youtube.com/embed/IlPFzRSZrSU","https://www.youtube.com/embed/R1EKAgFRe2E","https://www.youtube.com/embed/j5SHMJ6mUoA","https://www.youtube.com/embed/Lscqihirc3c?start=3",
+      ];
+      const inter = intermediateSrc.length;
+      // const interRandIndex = Math.floor(Math.random() * inter);
+
+      const advancedSrc = [
+      "https://www.youtube.com/embed/-K2vxOQG0MQ","https://www.youtube.com/embed/Y2eOW7XYWxc","https://www.youtube.com/embed/zr08J6wB53Y","https://www.youtube.com/embed/AnYl6Nk9GOA","https://www.youtube.com/embed/e3-zpBc_hg8",
+      ];
+      const adv = advancedSrc.length;
+      // const advRandIndex = Math.floor(Math.random() * adv);
+
+      let i = 0;
+
+      const tableSet = document.querySelector("table");
+
+      // function monday() {
+      //   messageEl.innerHTML = day[0];
+      //   tableSet.style.backgroundColor = "#e6ba85";
+      //   document.querySelector(".b2 iframe").src = beginnerSrc[begRandIndex];
+
+      //   document.querySelector(".i2 iframe").src =
+      //     intermediateSrc[interRandIndex];
+
+      //   document.querySelector(".a2 iframe").src = advancedSrc[advRandIndex];
+      // }
+
+      function tuesday() {
+        messageEl.innerHTML = day[1];
+        tableSet.style.backgroundColor = "#fafdd6";
+        document.querySelector(".b1 iframe").src = "https://www.youtube.com/embed/06cwQlikBEA";
+        document.querySelector(".b2 iframe").src = beginnerSrc[begRandIndex = Math.floor(Math.random() * beg)];
+
+        document.querySelector(".i1 iframe").src =
+        "https://www.youtube.com/embed/glXY7-W6D5w";
+        document.querySelector(".i2 iframe").src =
+          intermediateSrc[Math.floor(Math.random() * inter)];
+
+        document.querySelector(".a1 iframe").src = "https://www.youtube.com/embed/Lscqihirc3c?start=3";
+        document.querySelector(".a2 iframe").src = advancedSrc[Math.floor(Math.random() * adv)];
+
+      }
+
+      function wednesday() {
+        messageEl.innerHTML = day[2];
+        tableSet.style.backgroundColor = "#e4e9be";
+        document.querySelector(".b1 iframe").src = "https://www.youtube.com/embed/Bl9_qRFam4M";
+        document.querySelector(".b2 iframe").src = beginnerSrc[begRandIndex = Math.floor(Math.random() * beg)];
+
+        document.querySelector(".i1 iframe").src = "https://www.youtube.com/embed/7537-yAhASA";
+        document.querySelector(".i2 iframe").src =
+          intermediateSrc[Math.floor(Math.random() * inter)];
+
+        document.querySelector(".a1 iframe").src = "https://www.youtube.com/embed/Y2eOW7XYWxc";
+        document.querySelector(".a2 iframe").src = advancedSrc[Math.floor(Math.random() * adv)];
+      }
+
+      function thursday() {
+        messageEl.innerHTML = day[3];
+        tableSet.style.backgroundColor = "#dae5d0";
+        document.querySelector(".b1 iframe").src = "https://www.youtube.com/embed/NCzNpWHIvTE?start=3"
+        document.querySelector(".b2 iframe").src = beginnerSrc[begRandIndex = Math.floor(Math.random() * beg)];
+
+
+        document.querySelector(".i1 iframe").src =
+        "https://www.youtube.com/embed/glXY7-W6D5w";
+        document.querySelector(".i2 iframe").src =
+          intermediateSrc[Math.floor(Math.random() * inter)];
+
+
+        document.querySelector(".a1 iframe").src = "https://www.youtube.com/embed/Y2eOW7XYWxc";
+        document.querySelector(".a2 iframe").src = advancedSrc[Math.floor(Math.random() * adv)];
+      }
+
+      function friday() {
+        messageEl.innerHTML = day[4];
+        tableSet.style.backgroundColor = "#a2b38b";
+        document.querySelector(".b1 iframe").src = "https://www.youtube.com/embed/Bl9_qRFam4M";
+        document.querySelector(".b2 iframe").src = beginnerSrc[begRandIndex = Math.floor(Math.random() * beg)];
+
+
+        document.querySelector(".i1 iframe").src =
+        "https://www.youtube.com/embed/7537-yAhASA";
+        document.querySelector(".i2 iframe").src =
+          intermediateSrc[Math.floor(Math.random() * inter)];
+
+
+        document.querySelector(".a1 iframe").src = "https://www.youtube.com/embed/Y2eOW7XYWxc";
+        document.querySelector(".a2 iframe").src = advancedSrc[Math.floor(Math.random() * adv)];
+      }
+
+      document.getElementById("monday").onclick = function () {
+        monday();
+      };
+      document.getElementById("tuesday").onclick = function () {
+        tuesday();
+      };
+      document.getElementById("wednesday").onclick = function () {
+        wednesday();
+      };
+      document.getElementById("thursday").onclick = function () {
+        thursday();
+      };
+      document.getElementById("friday").onclick = function () {
+        friday();
+      };
+    </script>
   </body>
 </html>
