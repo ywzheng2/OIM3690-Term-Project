@@ -11,12 +11,15 @@
     />
     <meta name="keywords" content="" />
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/main.css"/>
     <style>
-      section {
-        padding: 3px 0;
+      .background-change {
+        background-color: #55828b;
       }
-      li {
+      section {
+        padding-top: 3px;
+      }
+      .site-info li {
         font-size: 20px;
         font-weight: bold;
         list-style: none;
@@ -31,6 +34,58 @@
         color: #e5e6e7;
         font-size: 16px;
       }
+ 
+      @media screen and (max-width: 800px) {
+        .background-change {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      }
+
+      /* dark-light button */
+      form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .checkbox {
+        display: none;
+      }
+
+      .label {
+        background-color: black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        width: 90px;
+        height: 35px;
+        /* padding: 0 10px; */
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 20px;
+        cursor: pointer;
+
+      }
+
+      .moon {
+        color: white;
+        padding: 0 10px;
+      }
+
+      .sun {
+        color: black;
+      }
+
+      .circle {
+        position: absolute;
+        left: 50%;
+        width: 50%;
+        height: 35px;
+        background-color: #55828b;
+        border-radius: 20px;
+      }
     </style>
   </head>
 
@@ -44,18 +99,31 @@
               src="images/logo.JPG"
               alt="SHAH Logo"
               title="stay healthy at home logo"
+              id="logo"
             />
           </div>
           <nav>
-            <div class="nav-list-main">
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="importance.html">Live Well</a></li>
-                <li><a href="workout.html">Workout</a></li>
-                <li><a href="plan.html">Workout Plan</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="sitemap.html">Sitemap</a></li>
-              </ul>
+            <div class="nav-icon">
+              <img src="images/menu.svg" alt="menu-icon" title="menu">
+              
+            </div>
+
+            <div class="nav-outside"></div>
+            <div class="nav-list">
+              <div class="nav-close">
+                <img src="images/x-square.svg" alt="close-icon" title="close">
+              </div>
+
+              <div class="nav-list-main">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="importance.html">Live Well</a></li>
+                  <li><a href="workout.html">Workout</a></li>
+                  <li><a href="plan.html">Workout Plan</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="sitemap.html">Sitemap</a></li>
+                </ul>
+              </div>
             </div>
           </nav>
         </div>
@@ -63,8 +131,61 @@
     </div>
     <!-- end nav section -->
 
-    <!-- site map -->
     <section>
+      <div class="container">
+        <form action="" method="post" class="night-button">
+          <input type="checkbox" class="checkbox" id="night" name="night" />
+          <label for="night" class="label">
+            <!-- <img src="images/moon.svg" alt="moon" title="moon"> -->
+            <div class="moon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+              </svg>
+            </div>
+            <div class="sun">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="5" />
+                <line x1="12" y1="1" x2="12" y2="3" />
+                <line x1="12" y1="21" x2="12" y2="23" />
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                <line x1="1" y1="12" x2="3" y2="12" />
+                <line x1="21" y1="12" x2="23" y2="12" />
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+              </svg>
+            </div>
+            <!-- <img src="images/sun.svg" alt="sun" title="sun" /> -->
+            <div class="circle">
+
+            </div>
+          </label>
+        </form>
+      </div>
+    </section>
+
+    <!-- site map -->
+    <section class="background-change">
       <div class="container">
         <h1>Stay Healthy At Home Site Map</h1>
         <ul class="site-info">
@@ -91,33 +212,48 @@
     </section>
     <!-- end site map -->
 
-    <!-- footer section -->
-    <footer>
-      <div class="container">
-        <div class="footer-main">
-          <div class="footer-col1">
-            <div class="footer-logo">
-              <img
-                src="images/logo.JPG"
-                alt="SHAT logo"
-                title="stay healthy at home logo"
-              />
-            </div>
-          </div>
-          <div>
-            <h3>Links</h3>
-            <ol class="footer-text">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="importance.html">Live Well</a></li>
-              <li><a href="workout.html">Workout</a></li>
-              <li><a href="plan.html">Workout Plan</a></li>
-              <li><a href="contact.html">Contact & Feedback</a></li>
-              <li><a href="sitemap.html">Sitemap</a></li>
-            </ol>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- end footer section -->
+
+    <script src="javascript/response.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-JV56CL5RGV"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-JV56CL5RGV");
+    </script>
+    <script>
+      const myForm = document.querySelector("form");
+      const circle = document.querySelector(".circle");
+      const label = document.querySelector(".label");
+      const background = document.querySelector(".background-change");
+
+      function darkLight() {
+        if (myForm["night"].checked) {
+          circle.style.left = "0";
+          circle.style.backgroundColor = "#d6e5d8";
+          label.style.backgroundColor = "white";
+          background.style.background = "#d6e5d8";
+
+        } else {
+          circle.style.left = "50%";
+          circle.style.backgroundColor = "#55828b";
+          label.style.backgroundColor = "black";
+          label.style.backgroundColor = "black";
+          background.style.background = "#55828b";
+          background.style.fontcolor = "white";
+        }
+      }
+      document.querySelector(".night-button").onclick = function() {
+        darkLight();
+      }
+    </script>
+
   </body>
 </html>

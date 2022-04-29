@@ -13,6 +13,11 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="styles/main.css" />
     <style>
+      #logo {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
       /* first section */
       .importance {
         padding: 4px 0;
@@ -28,7 +33,7 @@
         width: 40%;
         height: 500px;
         border-radius: 8px;
-        background: center / cover no-repeat url(images/upper-body2.jpg);
+        background: center / cover no-repeat url(images/lower-body2.jpg);
       }
 
       .importance .container .right {
@@ -55,9 +60,83 @@
         color: rgb(228, 224, 220);
       }
 
+      @media screen and (max-width: 700px) {
+        .importance .container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          width: 90%;
+        }
+
+        .importance .container .left {
+          width: 100%;
+          height: 400px;
+        }
+        .importance .container .right {
+          width: 80%;
+          margin: 0;
+          margin-top: -100px;
+        }
+      }
+
       /* second section */
       .video-gallery .container h1 {
         text-align: center;
+      }
+
+      .container .row {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .container .col {
+        flex-basis: 50%;
+      }
+
+      .feature-video {
+        width: 85%;
+        position: relative;
+        margin: auto;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .feature-video iframe {
+        width: 100%;
+        border-radius: 8px;
+      }
+
+      .small-video-row {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        background: #2f3d3c;
+        margin: 30px 0;
+        border-radius: 8px;
+        overflow: hidden;
+        height: 100px;
+      }
+
+      .small-video iframe {
+        width: 150px;
+      }
+
+      .small-video-row p {
+        margin-left: 20px;
+        margin-right: 20px;
+        color: white;
+        font-size: 14px;
+      }
+
+      .fitting {
+        position: relative;
+        width: 85%;
+        margin: auto;
+        border-radius: 8px;
+        overflow: hidden;
       }
 
       .link {
@@ -79,6 +158,36 @@
         transform: translateY(20px);
         box-shadow: 10px 15px rgb(171, 196, 171);
       }
+
+      #lower-body-img {
+        /* width: 50px; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        /* min-width: 0;
+        max-width: none;
+        object-fit: contain; */
+      }
+
+      .img-source {
+        font-size: 10px;
+        text-align: center;
+      }
+
+      #info,
+      #infographic {
+        margin-top: -150px;
+      }
+
+      @media screen and (max-width: 700px) {
+        .small-video-row p {
+          margin-left: 5px;
+          margin-right: 5px;
+          font-size: 10px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -87,22 +196,35 @@
       <div class="container">
         <div class="nav-main">
           <div class="logo">
-            <img
-              src="images/logo.JPG"
-              alt="SHAH Logo"
-              title="stay healthy at home logo"
-            />
+            <a href="index.html"
+              ><img
+                src="images/logo.JPG"
+                alt="SHAH Logo"
+                title="stay healthy at home logo"
+                id="logo"
+            /></a>
           </div>
           <nav>
-            <div class="nav-list-main">
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="importance.html">Live Well</a></li>
-                <li><a href="workout.html">Workout</a></li>
-                <li><a href="plan.html">Workout Plan</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="sitemap.html">Sitemap</a></li>
-              </ul>
+            <div class="nav-icon">
+              <img src="images/menu.svg" alt="menu-icon" title="menu" />
+            </div>
+
+            <div class="nav-outside"></div>
+            <div class="nav-list">
+              <div class="nav-close">
+                <img src="images/x-square.svg" alt="close-icon" title="close" />
+              </div>
+
+              <div class="nav-list-main">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="importance.html">Live Well</a></li>
+                  <li><a href="workout.html">Workout</a></li>
+                  <li><a href="plan.html">Workout Plan</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="sitemap.html">Sitemap</a></li>
+                </ul>
+              </div>
             </div>
           </nav>
         </div>
@@ -133,7 +255,239 @@
     <!-- TODO: need a javascript to enlarge to video when the user click play -->
     <section class="video-gallery">
       <div class="container">
-        <h1>Lower Body Workout - Coming Soon</h1>
+        <h1>Lower Body Workout - Beginner</h1>
+        <div class="row">
+          <div class="col">
+            <div class="feature-video">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/7HIr1g39PzA"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="small-video-row">
+              <p>
+                <strong>
+                  Toned Inner and Outer Thighs Workout | Duration: 20 Min |
+                  @growingannanas</strong
+                >
+              </p>
+            </div>
+
+            <div class="small-video-row">
+              <p>
+                <strong>Workout</strong>: Plie Squats + Heel Raise + Leg Swing |
+                ALternating Lateral Lunges | Inner Leg Lift | Leg Lift Hold +
+                Tap | Outer Leg Lift ...
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="small-video-row fitting">
+              <div class="small-video">
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/aCa8R9II8F0"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <p>Leg/Butt/Thigh Workout | Duration: 15 Min | @MadFit</p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="small-video-row">
+              <div class="small-video">
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/nG69wuXHwxg"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <p>
+                Beginner Leg Workout - Booty, Thighs & Hamstrings | Duration: 10
+                Min | @Pamela Reif
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <h1>Lower Body Workout - Intermediate</h1>
+        <div class="row">
+          <div class="col">
+            <div class="feature-video">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/ySoL_wNzF28?start=6"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="small-video-row">
+              <p>15 MIN Full UPPER BODY Workout | Duration: 15 Min | @MadFit</p>
+            </div>
+
+            <div class="small-video-row">
+              <p>
+                Workout: Push Ups | Overhand Back Row | Tricep Kickback | Curl
+                to Press | Back Row to Reverse Fly | Bicep Curls | Chess Press |
+                Laternal Raises
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="small-video-row fitting">
+              <div class="small-video">
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/HVyt7ywsOQ8"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <p>
+                Leg Workout - Thighs, Booty, Calves | Duration: 15 Min | @MadFit
+              </p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="small-video-row">
+              <div class="small-video">
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/Fu_oExrPX68"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <p>
+                Leg Workout - Butt, Thighs & Calves | Duration: 12 Min | @Pamela
+                Reif
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <h1>Lower Body Workout - Advanced</h1>
+        <div class="row">
+          <div class="col">
+            <div class="feature-video">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/NFr-3aAb2Gg"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="small-video-row">
+              <p>
+                Intense Abs + Core Workout | Duration: 25 Min | @growingannanas
+              </p>
+            </div>
+
+            <div class="small-video-row">
+              <p>
+                Workout: Hollow Knee Hug Crunch | Bicycle Crunches | Deadbug + 3
+                sec hold | 1 Arm Plank Left Arm | 1 Arm Plank Right Arm |
+                Reverse Crunches | Straight Leg Bicycles | Elbow to Knee -
+                Hollow Crunch | Mountain Climbers | Plank Reach + Toe Touch ...
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="small-video-row fitting">
+              <div class="small-video">
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/8-PjpUH8TcE"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <p>
+                Killer Lower Body HIIT Workout | Duration: 30 Min |
+                @growingannanas
+              </p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="small-video-row">
+              <div class="small-video">
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/LAeOJH_OIks"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <p>
+                Legs - a hardcore workout for booty, calves, inner + outer
+                thighs | Duration: 10 Min | @Pamela Reif
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- importance 2nd section -->
+    <section class="video-gallery" id="info">
+      <div class="container">
+        <h1>Lower Body Workout Resource</h1>
         <div class="link">
           <a href="https://www.self.com/package/lower-body-workouts">
             <p>Lower Body At-Home Workout</p></a
@@ -142,33 +496,56 @@
       </div>
     </section>
 
-    <!-- footer section -->
-    <footer>
+    <section id="infographic">
       <div class="container">
-        <div class="footer-main">
-          <div class="footer-col1">
-            <div class="footer-logo">
-              <img
-                src="images/logo.JPG"
-                alt="SHAT logo"
-                title="stay healthy at home logo"
-              />
-            </div>
-          </div>
-          <div>
-            <h3>Links</h3>
-            <ol class="footer-text">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="importance.html">Live Well</a></li>
-              <li><a href="workout.html">Workout</a></li>
-              <li><a href="plan.html">Workout Plan</a></li>
-              <li><a href="contact.html">Contact & Feedback</a></li>
-              <li><a href="sitemap.html">Sitemap</a></li>
-            </ol>
-          </div>
+        <div>
+          <img
+            src="images/lower.jpg"
+            alt="upper-body"
+            title="upper-body"
+            id="lower-body-img"
+            width="250px"
+          />
+          <p class="img-source">
+            Source:
+            https://greatist.com/fitness/leg-workout-7-minute-workout-backed-by-science#1
+          </p>
         </div>
       </div>
-    </footer>
-    <!-- end footer section -->
+    </section>
+
+    <script>
+      const imageEl = document.getElementById("lower-body-img");
+      function enlargeImage() {
+        imageEl.width = imageEl.width * 1.75;
+      }
+      document.getElementById("lower-body-img").onmouseover = function () {
+        enlargeImage();
+      };
+
+      function reduceImage() {
+        imageEl.width = imageEl.width / 1.75;
+        // imageEL.height = imageEL.height / 1.75;
+      }
+
+      document.getElementById("lower-body-img").onmouseout = function () {
+        reduceImage();
+      };
+    </script>
+    <script src="javascript/response.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-JV56CL5RGV"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-JV56CL5RGV");
+    </script>
   </body>
 </html>

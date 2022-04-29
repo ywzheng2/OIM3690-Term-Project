@@ -161,8 +161,8 @@
                     ></iframe>
                   </div>
                   <div class="video-title">
-                    <h4>10 Min Toned Arms</h4>
-                    <p>Pamela Reif</p>
+                    <h4>Randomly Generated</h4>
+                    <!-- <p>Pamela Reif</p> -->
                   </div>
                 </div>
               </td>
@@ -180,8 +180,7 @@
                     ></iframe>
                   </div>
                   <div class="video-title">
-                    <h4>10 Min Abs with Weights</h4>
-                    <p>Pamela Reif</p>
+                    <h4>Randomly Generated</h4>
                   </div>
                 </div>
               </td>
@@ -199,8 +198,7 @@
                     ></iframe>
                   </div>
                   <div class="video-title">
-                    <h4>10 Min Upper Body Workout</h4>
-                    <p>Pamela Reif</p>
+                    <h4>Randomly Generated</h4>
                   </div>
                 </div>
               </td>
@@ -218,10 +216,6 @@
                       allowfullscreen
                     ></iframe>
                   </div>
-                  <div class="video-title">
-                    <h4>10 Min Legs + Fat Burn</h4>
-                    <p>Pamela Reif</p>
-                  </div>
                 </div>
               </td>
 
@@ -236,10 +230,6 @@
                       allowfullscreen
                     ></iframe>
                   </div>
-                  <div class="video-title">
-                    <h4>10 Min Inner Thigh</h4>
-                    <p>Pamela Reif</p>
-                  </div>
                 </div>
               </td>
 
@@ -253,10 +243,6 @@
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowfullscreen
                     ></iframe>
-                  </div>
-                  <div class="video-title">
-                    <h4>10 Min Killer Sixpack</h4>
-                    <p>Pamela Reif</p>
                   </div>
                 </div>
               </td>
@@ -274,7 +260,7 @@
       const day = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 
       const beginnerSrc = [
-      "https://www.youtube.com/embed/H2U3HwAyBXg","https://www.youtube.com/embed/IT94xC35u6k","https://www.youtube.com/embed/VWj8ZxCxrYk","https://www.youtube.com/embed/CD6BCdFHogg","https://www.youtube.com/embed/fMPoCc78v0g",
+      "https://www.youtube.com/embed/H2U3HwAyBXg","https://www.youtube.com/embed/IT94xC35u6k","https://www.youtube.com/embed/VWj8ZxCxrYk","https://www.youtube.com/embed/CD6BCdFHogg","https://www.youtube.com/embed/fMPoCc78v0g", "https://www.youtube.com/embed/eXhdSpq8xR8?start=22",
       ];
       const beg = beginnerSrc.length;
       // const begRandIndex = Math.floor(Math.random() * beg);
@@ -295,16 +281,16 @@
 
       const tableSet = document.querySelector("table");
 
-      // function monday() {
-      //   messageEl.innerHTML = day[0];
-      //   tableSet.style.backgroundColor = "#e6ba85";
-      //   document.querySelector(".b2 iframe").src = beginnerSrc[begRandIndex];
+      function monday() {
+        messageEl.innerHTML = day[0];
+        tableSet.style.backgroundColor = "#e6ba85";
+        document.querySelector(".b2 iframe").src = beginnerSrc[begRandIndex];
 
-      //   document.querySelector(".i2 iframe").src =
-      //     intermediateSrc[interRandIndex];
+        document.querySelector(".i2 iframe").src =
+          intermediateSrc[interRandIndex];
 
-      //   document.querySelector(".a2 iframe").src = advancedSrc[advRandIndex];
-      // }
+        document.querySelector(".a2 iframe").src = advancedSrc[advRandIndex];
+      }
 
       function tuesday() {
         messageEl.innerHTML = day[1];

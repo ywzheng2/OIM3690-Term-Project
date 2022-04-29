@@ -21,22 +21,35 @@
       <div class="container">
         <div class="nav-main">
           <div class="logo">
-            <img
+            <a href="index.html"><img
               src="images/logo.JPG"
               alt="SHAH Logo"
               title="stay healthy at home logo"
-            />
+              id="logo"
+            /></a>
           </div>
           <nav>
-            <div class="nav-list-main">
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="importance.html">Live Well</a></li>
-                <li><a href="workout.html">Workout</a></li>
-                <li><a href="plan.html">Workout Plan</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="sitemap.html">Sitemap</a></li>
-              </ul>
+            <div class="nav-icon">
+              <img src="images/menu.svg" alt="menu-icon" title="menu">
+              
+            </div>
+
+            <div class="nav-outside"></div>
+            <div class="nav-list">
+              <div class="nav-close">
+                <img src="images/x-square.svg" alt="close-icon" title="close">
+              </div>
+
+              <div class="nav-list-main">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="importance.html">Live Well</a></li>
+                  <li><a href="workout.html">Workout</a></li>
+                  <li><a href="plan.html">Workout Plan</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="sitemap.html">Sitemap</a></li>
+                </ul>
+              </div>
             </div>
           </nav>
         </div>
@@ -100,7 +113,7 @@
     <!-- YouTuber section -->
     <section class="new-section">
       <div class="container">
-        <h2 class="youtuber">Top Fitness YouTube</h2>
+        <h2 class="youtuber">Favorite Fitness YouTuber</h2>
         <div class="youtuber-main">
           <div class="youtuber-info">
             <a href="https://www.youtube.com/channel/UChVRfsT_ASBZk10o0An7Ucg">
@@ -148,16 +161,16 @@
           </div>
 
           <div class="youtuber-info">
-            <a href="https://www.youtube.com/c/EmiWong">
+            <a href="https://www.youtube.com/user/blogilates">
               <div>
                 <img
-                  src="images/emi-wong.jpg"
-                  alt="Emi Wong image"
-                  title="wong-image"
+                  src="images/cassey-ho.jpg"
+                  alt="Cassey Ho image"
+                  title="cassey-ho"
                 />
               </div>
               <div class="yt-info">
-                <h3>Emi Wong</h3>
+                <h3>Cassey Ho</h3>
               </div></a
             >
           </div>
@@ -166,52 +179,28 @@
     </section>
     <!-- end YouTuber section -->
 
-    <!-- body part section -->
-
-    <!-- end body part section -->
-
     <!-- footer section -->
     <footer>
       <div class="container">
-        <div class="footer-main">
-          <div class="footer-col1">
-            <div class="footer-logo">
-              <img
-                src="images/logo.JPG"
-                alt="SHAT logo"
-                title="stay healthy at home logo"
-              />
-            </div>
-          </div>
-          <div>
-            <h3>Links</h3>
-            <ol class="footer-text">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="importance.html">Live Well</a></li>
-              <li><a href="workout.html">Workout</a></li>
-              <li><a href="plan.html">Workout Plan</a></li>
-              <li><a href="contact.html">Contact & Feedback</a></li>
-              <li><a href="sitemap.html">Sitemap</a></li>
-            </ol>
-          </div>
-        </div>
+        
       </div>
     </footer>
     <!-- end footer section -->
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-JV56CL5RGV"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-JV56CL5RGV");
+    <script src="javascript/response.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-JV56CL5RGV"
+      ></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+  
+        gtag("config", "G-JV56CL5RGV");
     </script>
   </body>
 </html>

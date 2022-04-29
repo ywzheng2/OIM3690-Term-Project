@@ -13,6 +13,12 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="styles/main.css" />
     <style>
+      #logo {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
       /* first section */
       .importance {
         padding: 4px 0;
@@ -55,6 +61,26 @@
         color: rgb(228, 224, 220);
       }
 
+      @media screen and (max-width: 700px) {
+        .importance .container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          width: 90%;
+        }
+
+        .importance .container .left {
+          width: 100%;
+          height: 400px;
+        }
+        .importance .container .right {
+          width: 80%;
+          margin: 0;
+          margin-top: -100px;
+        }
+      }
+
       /* second section */
       .video-gallery .container h1 {
         text-align: center;
@@ -85,6 +111,7 @@
 
       .small-video-row {
         display: flex;
+        flex-direction: row-reverse;
         justify-content: center;
         align-items: center;
         background: #2f3d3c;
@@ -112,6 +139,35 @@
         border-radius: 8px;
         overflow: hidden;
       }
+
+      #upper-body-img {
+        /* width: 50px; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        /* min-width: 0;
+        max-width: none;
+        object-fit: contain; */
+      }
+
+      .img-source {
+        font-size: 10px;
+        text-align: center;
+      }
+
+      #infographic {
+        margin-top: -150px;
+      }
+
+      @media screen and (max-width: 700px) {
+        .small-video-row p {
+        margin-left: 5px;
+        margin-right: 5px;
+        font-size: 10px;
+      }
+      }
     </style>
   </head>
   <body>
@@ -120,22 +176,35 @@
       <div class="container">
         <div class="nav-main">
           <div class="logo">
-            <img
-              src="images/logo.JPG"
-              alt="SHAH Logo"
-              title="stay healthy at home logo"
-            />
+            <a href="index.html"
+              ><img
+                src="images/logo.JPG"
+                alt="SHAH Logo"
+                title="stay healthy at home logo"
+                id="logo"
+            /></a>
           </div>
           <nav>
-            <div class="nav-list-main">
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="importance.html">Live Well</a></li>
-                <li><a href="workout.html">Workout</a></li>
-                <li><a href="plan.html">Workout Plan</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="sitemap.html">Sitemap</a></li>
-              </ul>
+            <div class="nav-icon">
+              <img src="images/menu.svg" alt="menu-icon" title="menu" />
+            </div>
+
+            <div class="nav-outside"></div>
+            <div class="nav-list">
+              <div class="nav-close">
+                <img src="images/x-square.svg" alt="close-icon" title="close" />
+              </div>
+
+              <div class="nav-list-main">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="importance.html">Live Well</a></li>
+                  <li><a href="workout.html">Workout</a></li>
+                  <li><a href="plan.html">Workout Plan</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="sitemap.html">Sitemap</a></li>
+                </ul>
+              </div>
             </div>
           </nav>
         </div>
@@ -175,7 +244,7 @@
               <iframe
                 width="560"
                 height="315"
-                src="https://www.youtube.com/embed/Bl9_qRFam4M"
+                src="https://www.youtube.com/embed/eXhdSpq8xR8?start=22"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -186,36 +255,22 @@
 
           <div class="col">
             <div class="small-video-row">
-              <div class="small-video">
-                <iframe
-                  width="560"
-                  height="315"
-                  src="https://www.youtube.com/embed/eXhdSpq8xR8?start=22"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-              </div>
-              <p>Toned Upper Body | Duration: 25 Min | @growingannanas</p>
+              <p><strong> Toned Upper Body | Duration: 25 Min | @growingannanas</strong>
+              </p>
             </div>
 
             <div class="small-video-row">
-              <div class="small-video">
-                <iframe
-                  width="560"
-                  height="315"
-                  src="https://www.youtube.com/embed/eBnSe3CIPn4"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-              </div>
               <p>
-                Upper Body Workout - Toned Arms, Chest & Back Muscles |
-                Duration: 10 Min | @Pamela Reif
-              </p>
+                <strong>Workout</strong>: Dumbbell Row + 3 sec Hold | 
+                Alternating Shoulder Press | 
+                Wide Bicep Curl | 
+                Tricep Extensions | 
+                Curl + Press | 
+                Glute Bridge Chest Press | 
+                Tempo Push Ups | 
+                Kneeling Tricep Extensions | 
+                Lateral Raises | 
+                Arnold Press ...</p>
             </div>
           </div>
         </div>
@@ -276,36 +331,14 @@
 
           <div class="col">
             <div class="small-video-row">
-              <div class="small-video">
-                <iframe
-                  width="560"
-                  height="315"
-                  src="https://www.youtube.com/embed/l2AHpn2i7_Y"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-              </div>
               <p>
-                AB Workout - Back & Neck Friendly | Duration: 10 Min | @Pamela
-                Reif
+                15 MIN Full UPPER BODY Workout | Duration: 15 Min | @MadFit
               </p>
             </div>
 
             <div class="small-video-row">
-              <div class="small-video">
-                <iframe
-                  width="560"
-                  height="315"
-                  src="https://www.youtube.com/embed/5cMYysFl4CY"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-              </div>
-              <p>Intense AB Workout | Duration: 10 Min | @Pamela Reif</p>
+              <p>Workout: Push Ups | Overhand Back Row | Tricep Kickback | Curl to Press | Back Row to Reverse Fly | Bicep Curls | Chess Press | Laternal Raises
+                 </p>
             </div>
           </div>
         </div>
@@ -366,34 +399,12 @@
 
           <div class="col">
             <div class="small-video-row">
-              <div class="small-video">
-                <iframe
-                  width="560"
-                  height="315"
-                  src="https://www.youtube.com/embed/j64BBgBGNIU?start=4"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-              </div>
               <p>Toned Arms Workout | Duration: 10 Min | @Chole Ting</p>
             </div>
 
             <div class="small-video-row">
-              <div class="small-video">
-                <iframe
-                  width="560"
-                  height="315"
-                  src="https://www.youtube.com/embed/3zl1_XGgDVk?start=4"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-              </div>
               <p>
-                2 in 1 - Flat Belly Workout | Duration: 20 Min |@Pamela Reif
+                Workout: C-Rotation | Wall Push Up | Forward Pulse | Backward Pulse | Arm Wing | Arm Squeeze | Around the World | Full Extention 
               </p>
             </div>
           </div>
@@ -440,33 +451,56 @@
       </div>
     </section>
 
-    <!-- footer section -->
-    <footer>
+    <section id="infographic">
       <div class="container">
-        <div class="footer-main">
-          <div class="footer-col1">
-            <div class="footer-logo">
-              <img
-                src="images/logo.JPG"
-                alt="SHAT logo"
-                title="stay healthy at home logo"
-              />
-            </div>
-          </div>
-          <div>
-            <h3>Links</h3>
-            <ol class="footer-text">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="importance.html">Live Well</a></li>
-              <li><a href="workout.html">Workout</a></li>
-              <li><a href="plan.html">Workout Plan</a></li>
-              <li><a href="contact.html">Contact & Feedback</a></li>
-              <li><a href="sitemap.html">Sitemap</a></li>
-            </ol>
-          </div>
+        <div>
+          <img
+            src="images/upper.jpg"
+            alt="upper-body"
+            title="upper-body"
+            id="upper-body-img"
+            width="250px"
+          />
+          <p class="img-source">
+            Source:
+            https://greatist.com/fitness/7-minute-upper-body-workout-you-can-do-at-home
+          </p>
         </div>
       </div>
-    </footer>
-    <!-- end footer section -->
+    </section>
+
+    <script>
+      const imageEl = document.getElementById("upper-body-img");
+      function enlargeImage() {
+        imageEl.width = imageEl.width * 1.75;
+      }
+      document.getElementById("upper-body-img").onmouseover = function () {
+        enlargeImage();
+      };
+
+      function reduceImage() {
+        imageEl.width = imageEl.width / 1.75;
+        // imageEL.height = imageEL.height / 1.75;
+      }
+
+      document.getElementById("upper-body-img").onmouseout = function () {
+        reduceImage();
+      };
+    </script>
+    <script src="javascript/response.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-JV56CL5RGV"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-JV56CL5RGV");
+    </script>
   </body>
 </html>
