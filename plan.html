@@ -91,23 +91,23 @@
       <div class="container">
         <div class="nav-main">
           <div class="logo">
-            <a href="index.html"><img
-              src="images/logo.JPG"
-              alt="SHAH Logo"
-              title="stay healthy at home logo"
-              id="logo"
+            <a href="index.html"
+              ><img
+                src="images/logo.JPG"
+                alt="SHAH Logo"
+                title="stay healthy at home logo"
+                id="logo"
             /></a>
           </div>
           <nav>
             <div class="nav-icon">
-              <img src="images/menu.svg" alt="menu-icon" title="menu">
-              
+              <img src="images/menu.svg" alt="menu-icon" title="menu" />
             </div>
 
             <div class="nav-outside"></div>
             <div class="nav-list">
               <div class="nav-close">
-                <img src="images/x-square.svg" alt="close-icon" title="close">
+                <img src="images/x-square.svg" alt="close-icon" title="close" />
               </div>
 
               <div class="nav-list-main">
@@ -160,10 +160,6 @@
                       allowfullscreen
                     ></iframe>
                   </div>
-                  <div class="video-title">
-                    <h4>Randomly Generated</h4>
-                    <!-- <p>Pamela Reif</p> -->
-                  </div>
                 </div>
               </td>
 
@@ -178,9 +174,6 @@
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowfullscreen
                     ></iframe>
-                  </div>
-                  <div class="video-title">
-                    <h4>Randomly Generated</h4>
                   </div>
                 </div>
               </td>
@@ -197,9 +190,6 @@
                       allowfullscreen
                     ></iframe>
                   </div>
-                  <div class="video-title">
-                    <h4>Randomly Generated</h4>
-                  </div>
                 </div>
               </td>
             </tr>
@@ -208,6 +198,10 @@
               <td class="plans">
                 <div class="b2">
                   <div>
+                    <div class="video-title">
+                      <h4>Randomly Generated</h4>
+                      <!-- <p>Pamela Reif</p> -->
+                    </div>
                     <iframe
                       src="https://www.youtube.com/embed/R1EKAgFRe2E"
                       title="YouTube video player"
@@ -222,6 +216,9 @@
               <td class="plans">
                 <div class="i2">
                   <div>
+                    <div class="video-title">
+                      <h4>Randomly Generated</h4>
+                    </div>
                     <iframe
                       src="https://www.youtube.com/embed/h9uZVP_qLVo"
                       title="YouTube video player"
@@ -236,6 +233,9 @@
               <td class="plans">
                 <div class="a2">
                   <div>
+                    <div class="video-title">
+                      <h4>Randomly Generated</h4>
+                    </div>
                     <iframe
                       src="https://www.youtube.com/embed/vOiP3kfFlrE"
                       title="YouTube video player"
@@ -247,7 +247,6 @@
                 </div>
               </td>
             </tr>
-
           </table>
         </div>
       </div>
@@ -260,19 +259,32 @@
       const day = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 
       const beginnerSrc = [
-      "https://www.youtube.com/embed/H2U3HwAyBXg","https://www.youtube.com/embed/IT94xC35u6k","https://www.youtube.com/embed/VWj8ZxCxrYk","https://www.youtube.com/embed/CD6BCdFHogg","https://www.youtube.com/embed/fMPoCc78v0g", "https://www.youtube.com/embed/eXhdSpq8xR8?start=22",
+        "https://www.youtube.com/embed/H2U3HwAyBXg",
+        "https://www.youtube.com/embed/IT94xC35u6k",
+        "https://www.youtube.com/embed/VWj8ZxCxrYk",
+        "https://www.youtube.com/embed/CD6BCdFHogg",
+        "https://www.youtube.com/embed/fMPoCc78v0g",
+        "https://www.youtube.com/embed/eXhdSpq8xR8?start=22",
       ];
       const beg = beginnerSrc.length;
       // const begRandIndex = Math.floor(Math.random() * beg);
 
       const intermediateSrc = [
-      "https://www.youtube.com/embed/DHOPWvO3ZcI","https://www.youtube.com/embed/IlPFzRSZrSU","https://www.youtube.com/embed/R1EKAgFRe2E","https://www.youtube.com/embed/j5SHMJ6mUoA","https://www.youtube.com/embed/Lscqihirc3c?start=3",
+        "https://www.youtube.com/embed/DHOPWvO3ZcI",
+        "https://www.youtube.com/embed/IlPFzRSZrSU",
+        "https://www.youtube.com/embed/R1EKAgFRe2E",
+        "https://www.youtube.com/embed/j5SHMJ6mUoA",
+        "https://www.youtube.com/embed/Lscqihirc3c?start=3",
       ];
       const inter = intermediateSrc.length;
       // const interRandIndex = Math.floor(Math.random() * inter);
 
       const advancedSrc = [
-      "https://www.youtube.com/embed/-K2vxOQG0MQ","https://www.youtube.com/embed/Y2eOW7XYWxc","https://www.youtube.com/embed/zr08J6wB53Y","https://www.youtube.com/embed/AnYl6Nk9GOA","https://www.youtube.com/embed/e3-zpBc_hg8",
+        "https://www.youtube.com/embed/-K2vxOQG0MQ",
+        "https://www.youtube.com/embed/Y2eOW7XYWxc",
+        "https://www.youtube.com/embed/zr08J6wB53Y",
+        "https://www.youtube.com/embed/AnYl6Nk9GOA",
+        "https://www.youtube.com/embed/e3-zpBc_hg8",
       ];
       const adv = advancedSrc.length;
       // const advRandIndex = Math.floor(Math.random() * adv);
@@ -284,76 +296,90 @@
       function monday() {
         messageEl.innerHTML = day[0];
         tableSet.style.backgroundColor = "#e6ba85";
-        document.querySelector(".b2 iframe").src = beginnerSrc[begRandIndex];
+        document.querySelector(".b2 iframe").src =
+          beginnerSrc[(begRandIndex = Math.floor(Math.random() * beg))];
 
         document.querySelector(".i2 iframe").src =
-          intermediateSrc[interRandIndex];
+          intermediateSrc[Math.floor(Math.random() * inter)];
 
-        document.querySelector(".a2 iframe").src = advancedSrc[advRandIndex];
+        document.querySelector(".a2 iframe").src =
+          advancedSrc[Math.floor(Math.random() * adv)];
       }
 
       function tuesday() {
         messageEl.innerHTML = day[1];
         tableSet.style.backgroundColor = "#fafdd6";
-        document.querySelector(".b1 iframe").src = "https://www.youtube.com/embed/06cwQlikBEA";
-        document.querySelector(".b2 iframe").src = beginnerSrc[begRandIndex = Math.floor(Math.random() * beg)];
+        document.querySelector(".b1 iframe").src =
+          "https://www.youtube.com/embed/06cwQlikBEA";
+        document.querySelector(".b2 iframe").src =
+          beginnerSrc[(begRandIndex = Math.floor(Math.random() * beg))];
 
         document.querySelector(".i1 iframe").src =
-        "https://www.youtube.com/embed/glXY7-W6D5w";
+          "https://www.youtube.com/embed/glXY7-W6D5w";
         document.querySelector(".i2 iframe").src =
           intermediateSrc[Math.floor(Math.random() * inter)];
 
-        document.querySelector(".a1 iframe").src = "https://www.youtube.com/embed/Lscqihirc3c?start=3";
-        document.querySelector(".a2 iframe").src = advancedSrc[Math.floor(Math.random() * adv)];
-
+        document.querySelector(".a1 iframe").src =
+          "https://www.youtube.com/embed/Lscqihirc3c?start=3";
+        document.querySelector(".a2 iframe").src =
+          advancedSrc[Math.floor(Math.random() * adv)];
       }
 
       function wednesday() {
         messageEl.innerHTML = day[2];
         tableSet.style.backgroundColor = "#e4e9be";
-        document.querySelector(".b1 iframe").src = "https://www.youtube.com/embed/Bl9_qRFam4M";
-        document.querySelector(".b2 iframe").src = beginnerSrc[begRandIndex = Math.floor(Math.random() * beg)];
+        document.querySelector(".b1 iframe").src =
+          "https://www.youtube.com/embed/Bl9_qRFam4M";
+        document.querySelector(".b2 iframe").src =
+          beginnerSrc[(begRandIndex = Math.floor(Math.random() * beg))];
 
-        document.querySelector(".i1 iframe").src = "https://www.youtube.com/embed/7537-yAhASA";
+        document.querySelector(".i1 iframe").src =
+          "https://www.youtube.com/embed/7537-yAhASA";
         document.querySelector(".i2 iframe").src =
           intermediateSrc[Math.floor(Math.random() * inter)];
 
-        document.querySelector(".a1 iframe").src = "https://www.youtube.com/embed/Y2eOW7XYWxc";
-        document.querySelector(".a2 iframe").src = advancedSrc[Math.floor(Math.random() * adv)];
+        document.querySelector(".a1 iframe").src =
+          "https://www.youtube.com/embed/Y2eOW7XYWxc";
+        document.querySelector(".a2 iframe").src =
+          advancedSrc[Math.floor(Math.random() * adv)];
       }
 
       function thursday() {
         messageEl.innerHTML = day[3];
         tableSet.style.backgroundColor = "#dae5d0";
-        document.querySelector(".b1 iframe").src = "https://www.youtube.com/embed/NCzNpWHIvTE?start=3"
-        document.querySelector(".b2 iframe").src = beginnerSrc[begRandIndex = Math.floor(Math.random() * beg)];
-
+        document.querySelector(".b1 iframe").src =
+          "https://www.youtube.com/embed/NCzNpWHIvTE?start=3";
+        document.querySelector(".b2 iframe").src =
+          beginnerSrc[(begRandIndex = Math.floor(Math.random() * beg))];
 
         document.querySelector(".i1 iframe").src =
-        "https://www.youtube.com/embed/glXY7-W6D5w";
+          "https://www.youtube.com/embed/glXY7-W6D5w";
         document.querySelector(".i2 iframe").src =
           intermediateSrc[Math.floor(Math.random() * inter)];
 
-
-        document.querySelector(".a1 iframe").src = "https://www.youtube.com/embed/Y2eOW7XYWxc";
-        document.querySelector(".a2 iframe").src = advancedSrc[Math.floor(Math.random() * adv)];
+        document.querySelector(".a1 iframe").src =
+          "https://www.youtube.com/embed/Y2eOW7XYWxc";
+        document.querySelector(".a2 iframe").src =
+          advancedSrc[Math.floor(Math.random() * adv)];
       }
 
       function friday() {
         messageEl.innerHTML = day[4];
         tableSet.style.backgroundColor = "#a2b38b";
-        document.querySelector(".b1 iframe").src = "https://www.youtube.com/embed/Bl9_qRFam4M";
-        document.querySelector(".b2 iframe").src = beginnerSrc[begRandIndex = Math.floor(Math.random() * beg)];
-
+        document.querySelector(".b1 iframe").src =
+          "https://www.youtube.com/embed/Bl9_qRFam4M";
+        document.querySelector(".b2 iframe").src =
+          beginnerSrc[(begRandIndex = Math.floor(Math.random() * beg))];
 
         document.querySelector(".i1 iframe").src =
-        "https://www.youtube.com/embed/7537-yAhASA";
+          "https://www.youtube.com/embed/7537-yAhASA";
         document.querySelector(".i2 iframe").src =
           intermediateSrc[Math.floor(Math.random() * inter)];
 
-
-        document.querySelector(".a1 iframe").src = "https://www.youtube.com/embed/Y2eOW7XYWxc";
-        document.querySelector(".a2 iframe").src = advancedSrc[Math.floor(Math.random() * adv)];
+        document.querySelector(".a1 iframe").src =
+          "https://www.youtube.com/embed/Y2eOW7XYWxc";
+        document.querySelector(".a2 iframe").src =
+          advancedSrc[Math.floor(Math.random() * adv)];
       }
 
       document.getElementById("monday").onclick = function () {

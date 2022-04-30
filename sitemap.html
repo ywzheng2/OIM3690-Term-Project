@@ -11,7 +11,7 @@
     />
     <meta name="keywords" content="" />
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="styles/main.css"/>
+    <link rel="stylesheet" href="styles/main.css" />
     <style>
       .background-change {
         background-color: #55828b;
@@ -28,18 +28,12 @@
         color: #3f3c3c;
         padding-top: 20px;
       }
-      .coming,
-      .coming-soon a {
-        padding-top: 20px;
-        color: #e5e6e7;
-        font-size: 16px;
-      }
- 
+
       @media screen and (max-width: 800px) {
         .background-change {
-        padding-left: 10px;
-        padding-right: 10px;
-      }
+          padding-left: 10px;
+          padding-right: 10px;
+        }
       }
 
       /* dark-light button */
@@ -66,7 +60,6 @@
         padding-right: 10px;
         border-radius: 20px;
         cursor: pointer;
-
       }
 
       .moon {
@@ -104,14 +97,13 @@
           </div>
           <nav>
             <div class="nav-icon">
-              <img src="images/menu.svg" alt="menu-icon" title="menu">
-              
+              <img src="images/menu.svg" alt="menu-icon" title="menu" />
             </div>
 
             <div class="nav-outside"></div>
             <div class="nav-list">
               <div class="nav-close">
-                <img src="images/x-square.svg" alt="close-icon" title="close">
+                <img src="images/x-square.svg" alt="close-icon" title="close" />
               </div>
 
               <div class="nav-list-main">
@@ -176,9 +168,7 @@
               </svg>
             </div>
             <!-- <img src="images/sun.svg" alt="sun" title="sun" /> -->
-            <div class="circle">
-
-            </div>
+            <div class="circle"></div>
           </label>
         </form>
       </div>
@@ -194,24 +184,13 @@
           <li><a href="workout.html">Workout</a></li>
           <li><a href="upper-body.html">Upper Body Workout</a></li>
           <li><a href="lower-body.html">Lower Body Workout</a></li>
+          <li><a href="stretching.html">Stretching Workouts</a></li>
           <li><a href="plan.html">Workout Plan</a></li>
           <li><a href="contact.html">Contact & Feedback Page</a></li>
         </ul>
-        <div class="coming">
-          <h3>Coming Soon</h3>
-          <ul class="coming-soon">
-            <li><a href="full-body.html">Fully Body Workout</a></li>
-            <li><a href="stretching.html">Stretching Workouts</a></li>
-            <!-- <li><a href="">Weekly Workout Plan - Tuesday</a></li>
-            <li><a href="">Weekly Workout Plan - Wednesday</a></li>
-            <li><a href="">Weekly Workout Plan - Thursday</a></li>
-            <li><a href="">Weekly Workout Plan - Friday</a></li> -->
-          </ul>
-        </div>
       </div>
     </section>
     <!-- end site map -->
-
 
     <script src="javascript/response.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -240,7 +219,6 @@
           circle.style.backgroundColor = "#d6e5d8";
           label.style.backgroundColor = "white";
           background.style.background = "#d6e5d8";
-
         } else {
           circle.style.left = "50%";
           circle.style.backgroundColor = "#55828b";
@@ -250,10 +228,9 @@
           background.style.fontcolor = "white";
         }
       }
-      document.querySelector(".night-button").onclick = function() {
+      document.querySelector(".night-button").onclick = function () {
         darkLight();
-      }
+      };
     </script>
-
   </body>
 </html>
